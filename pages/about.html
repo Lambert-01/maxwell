@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Maxwell Consultancy Ltd - Our history, mission, vision, values, and leadership team">
+    <title>About Us - Maxwell Consultancy Ltd</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo/logo maxwell.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo/logo maxwell.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/logo maxwell.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo/logo maxwell.png">
+    <link rel="manifest" href="../config/manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Additional styles for about page */
+        .about-hero {
+            background-color: var(--primary-blue);
+            padding: 100px 0 60px; /* Reduced padding */
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+        
+        .about-hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-hero__title {
+            font-size: 2.5rem; /* Reduced font size */
+            margin-bottom: 1rem; /* Reduced margin */
+            color: white;
+        }
+        
+        .about-hero__subtitle {
+            font-size: 1.2rem; /* Reduced font size */
+            margin-bottom: 1.5rem; /* Reduced margin */
+            font-weight: 300;
+        }
+        
+        .team-profile {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem; /* Reduced gap */
+            align-items: center;
+            padding: 2rem 0; /* Reduced padding */
+        }
+        
+        .team-profile__content {
+            order: 2;
+        }
+        
+        .team-profile__image {
+            order: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        
+        .team-profile__image::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 2px solid var(--accent-orange);
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .team-profile__image:hover::before {
+            opacity: 1;
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            bottom: 25px;
+        }
+        
+        .team-profile__image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-profile__image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .team-profile__name {
+            font-size: 1.8rem; /* Reduced font size */
+            color: var(--primary-blue);
+            margin-bottom: 0.3rem; /* Reduced margin */
+        }
+        
+        .team-profile__position {
+            font-size: 1.1rem; /* Reduced font size */
+            color: var(--accent-orange);
+            margin-bottom: 1rem; /* Reduced margin */
+            font-weight: 500;
+        }
+        
+        .team-profile__bio {
+            margin-bottom: 1.5rem; /* Reduced margin */
+            line-height: 1.6; /* Reduced line height */
+        }
+        
+        .team-profile__bio p {
+            margin-bottom: 0.8rem; /* Reduced margin */
+        }
+        
+        .team-profile--reverse .team-profile__content {
+            order: 1;
+        }
+        
+        .team-profile--reverse .team-profile__image {
+            order: 2;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .mission-vision {
+            padding: 3rem 0; /* Reduced padding */
+            background-color: var(--background-gray);
+        }
+        
+        .mission-vision__container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        
+        .mission-vision__item {
+            background-color: white;
+            padding: 2rem; /* Reduced padding */
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .mission-vision__item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mission-vision__title {
+            font-size: 1.8rem; /* Reduced font size */
+            color: var(--primary-blue);
+            margin-bottom: 1rem; /* Reduced margin */
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .mission-vision__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+        
+        .mission-vision__item:hover .mission-vision__title::after {
+            width: 100px;
+        }
+        
+        .values-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .value-item {
+            background-color: white;
+            padding: 1.5rem; /* Reduced padding */
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .value-item:hover::before {
+            width: 10px;
+        }
+        
+        .value-item__title {
+            font-size: 1.3rem; /* Reduced font size */
+            color: var(--primary-blue);
+            margin-bottom: 0.8rem; /* Reduced margin */
+        }
+        
+        @media (min-width: 768px) {
+            .team-profile {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .mission-vision__container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="../assets/images/logo/logo maxwell.png" alt="Maxwell Consultancy Ltd Logo">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link active">About Us</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                    <li class="nav__item dropdown">
+                        <a href="projects.html" class="nav__link">Projects <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="projects.html#buildings">Buildings Construction Projects</a></li>
+                            <li><a href="projects.html#roads">Roads Industrial Parks Airports</a></li>
+                            <li><a href="projects.html#water">Water Supply System Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="contact.html#booking" class="nav__link nav__link--highlight">Book Online</a></li>
+                </ul>
+            </nav>
+            <div class="header__mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero__content" data-aos="fade-up">
+                <h1 class="about-hero__title">WHO WE ARE</h1>
+                <p class="about-hero__subtitle">Meet the engineers behind MCL Consultants</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company History Section -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content" data-aos="fade-up">
+                <p class="about-text">Maxwell Consultancy Ltd, founded in 2003 and officially registered in Rwanda in 2008, has grown into one of East Africa's premier consulting firms. With 62 professionals, we specialize in design, supervision, feasibility studies, and innovative engineering solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team Section -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">LEADERSHIP TEAM</h2>
+                <p class="section__subtitle">The experts behind our success</p>
+            </div>
+            
+            <!-- Managing Director -->
+            <div class="team-profile" data-aos="fade-up">
+                <div class="team-profile__content">
+                    <h3 class="team-profile__name">MPAGAZEHE ROBERT</h3>
+                    <p class="team-profile__position">Managing Director</p>
+                    <div class="team-profile__bio">
+                        <p>Eng. Mpagazehe Robert, an accomplished civil engineer and certified ACCA professional, leads Maxwell Consultancy Ltd with a commitment to excellence.</p>
+                        <p>With over two decades of experience, he has overseen landmark projects such as the Kamembe Airport Infrastructure.</p>
+                        <p>His vision is to empower communities through sustainable engineering and innovative solutions.</p>
+                    </div>
+                </div>
+                <div class="team-profile__image">
+                    <img src="../assets/images/team/robert mpagazehe ceo.png" alt="Mpagazehe Robert - Managing Director">
+                </div>
+            </div>
+            
+            <!-- Executive Director -->
+            <div class="team-profile team-profile--reverse" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-profile__content">
+                    <h3 class="team-profile__name">DUSABE JANE</h3>
+                    <p class="team-profile__position">Executive Director</p>
+                    <div class="team-profile__bio">
+                        <p>As Executive Director, Jane brings exceptional leadership and strategic vision to Maxwell Consultancy Ltd.</p>
+                        <p>Her expertise in business development and client relations has been instrumental in the company's growth and success in the East African market.</p>
+                        <p>Jane's commitment to excellence ensures that every project meets the highest standards of quality and innovation.</p>
+                    </div>
+                </div>
+                <div class="team-profile__image">
+                    <img src="../assets/images/team/dusabe jane.png" alt="Dusabe Jane - Executive Director">
+                </div>
+                    </div>
+            
+            <!-- Senior Structural Engineer -->
+            <div class="team-profile" data-aos="fade-up" data-aos-delay="300">
+                <div class="team-profile__content">
+                    <h3 class="team-profile__name">NGABONZIZA JEAN D'AMOUR</h3>
+                    <p class="team-profile__position">Senior Structural Engineer</p>
+                    <div class="team-profile__bio">
+                        <p>Jean D'Amour leads our structural engineering department with exceptional technical expertise and innovative problem-solving abilities.</p>
+                        <p>His extensive experience in designing complex structures has contributed to the successful completion of numerous high-profile projects.</p>
+                        <p>He ensures that all structural designs meet international standards while addressing the unique challenges of each project.</p>
+                    </div>
+                </div>
+                <div class="team-profile__image">
+                    <img src="../assets/images/team/ngabonziza damour.png" alt="Ngabonziza Jean D'Amour - Senior Structural Engineer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Grid Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">OUR TEAM</h2>
+                <p class="section__subtitle">The professionals behind our success</p>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Finance Manager -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card__image">
+                        <img src="../assets/images/team/dorine umutesi.png" alt="Doreen Umutesi">
+                    </div>
+                    <div class="team-card__content">
+                        <h3 class="team-card__name">DOREEN UMUTESI</h3>
+                        <p class="team-card__position">Finance Manager</p>
+                    </div>
+                </div>
+                
+                <!-- Civil Engineer -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card__image">
+                        <img src="../assets/images/team/kalisa.png" alt="Kalisa Jean Paul">
+                    </div>
+                    <div class="team-card__content">
+                        <h3 class="team-card__name">KALISA JEAN PAUL</h3>
+                        <p class="team-card__position">Civil Engineer</p>
+                    </div>
+                </div>
+                
+                <!-- Civil Engineer -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card__image">
+                        <img src="../assets/images/team/josiane.png" alt="Josiane Mukamana">
+                    </div>
+                    <div class="team-card__content">
+                        <h3 class="team-card__name">JOSIANE MUKAMANA</h3>
+                        <p class="team-card__position">Civil Engineer</p>
+                    </div>
+                </div>
+                
+                <!-- Project Manager -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-card__image">
+                        <img src="../assets/images/team/sibomana.png" alt="Sibomana Theogene">
+                    </div>
+                    <div class="team-card__content">
+                        <h3 class="team-card__name">SIBOMANA THEOGENE</h3>
+                        <p class="team-card__position">Project Manager</p>
+                    </div>
+                </div>
+                
+                <!-- Quantity Surveyor -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="team-card__image">
+                        <img src="../assets/images/team/ngabonziza.png" alt="Ngabonziza Jean Pierre">
+                    </div>
+                    <div class="team-card__content">
+                        <h3 class="team-card__name">NGABONZIZA JEAN PIERRE</h3>
+                        <p class="team-card__position">Quantity Surveyor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision__container">
+                <!-- Mission -->
+                <div class="mission-vision__item" data-aos="fade-right">
+                    <h3 class="mission-vision__title">OUR MISSION</h3>
+                    <p>Consolidating progress by offering timely, innovative solutions to help clients realize their aspirations while contributing to sustainable development.</p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="mission-vision__item" data-aos="fade-left">
+                    <h3 class="mission-vision__title">OUR VISION</h3>
+                    <p>To unblock the world and transform dreams into reality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">CORE VALUES</h2>
+                <p class="section__subtitle">The principles that guide our work</p>
+            </div>
+            
+            <div class="values-list">
+                <!-- Respect -->
+                <div class="value-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="value-item__title">Respect</h3>
+                    <p>Honoring local culture, environment, and clients.</p>
+                    </div>
+                
+                <!-- Integrity -->
+                <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="value-item__title">Integrity</h3>
+                    <p>Delivering on our promises with unwavering ethics.</p>
+                    </div>
+                
+                <!-- Commitment -->
+                <div class="value-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="value-item__title">Commitment</h3>
+                    <p>Driving excellence and continuous improvement.</p>
+                </div>
+                
+                <!-- Excellence -->
+                <div class="value-item" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="value-item__title">Excellence</h3>
+                    <p>Providing high-quality services through innovation and training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta section section--primary">
+        <div class="container">
+            <div class="contact-cta__content" data-aos="fade-up">
+                <h2 class="contact-cta__title">Ready to Work With Us?</h2>
+                <p class="contact-cta__text">Contact our team today to discuss your project needs and how we can help you achieve your goals.</p>
+                <a href="contact.html" class="btn btn--white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column footer__column--about">
+                    <img src="../assets/images/logo/logo maxwell.png" alt="Maxwell Consultancy Ltd" class="footer__logo">
+                    <p class="footer__description">Maxwell Consultancy Ltd is a leading engineering and construction consultancy firm based in Kisimenti - KG1, 50, Kigali, Rwanda, providing innovative solutions across East Africa.</p>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Our Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services.html">Structural Engineering</a></li>
+                        <li><a href="services.html">Transport & Highway Engineering</a></li>
+                        <li><a href="services.html">Project Management</a></li>
+                        <li><a href="services.html">Construction Supervision</a></li>
+                        <li><a href="services.html">Quality Assurance</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column footer__column--contact">
+                    <h3 class="footer__heading">Contact Us</h3>
+                    <address class="footer__contact">
+                        <p><strong>Address:</strong> Kisimenti - KG1, 50, Kigali, Rwanda</p>
+                        <p><strong>Phone:</strong> +(250) 795 583 304</p>
+                        <p><strong>P.O Box:</strong> 5095</p>
+                        <p><strong>Email:</strong> info@maxwellconsultancyltd.com</p>
+                    </address>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2023 Maxwell Consultancy Ltd. All Rights Reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+</body>
+</html> 

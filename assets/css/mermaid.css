@@ -1,0 +1,91 @@
+/* 
+ * Maxwell Consultancy Ltd - Mermaid Diagram Stylesheet
+ * Author: Maxwell Web Team
+ * Version: 1.0
+ */
+
+/* General Mermaid Container */
+.mermaid {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-md) 0;
+  overflow: auto;
+  max-width: 100%;
+}
+
+/* Node Styling */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon,
+.mermaid .node path {
+  fill: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 1px !important;
+}
+
+/* Node Label Styling */
+.mermaid .nodeLabel {
+  color: var(--white) !important;
+  font-family: var(--font-primary) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+/* Edge Path Styling */
+.mermaid .edgePath .path {
+  stroke: var(--primary-blue) !important;
+  stroke-width: 1.5px !important;
+}
+
+/* Arrow Head Styling */
+.mermaid .arrowheadPath {
+  fill: var(--primary-blue) !important;
+  stroke: none !important;
+}
+
+/* Cluster Styling */
+.mermaid .cluster rect {
+  fill: var(--background-light) !important;
+  stroke: var(--primary-blue) !important;
+  stroke-width: 1px !important;
+  rx: 5px !important;
+  ry: 5px !important;
+}
+
+.mermaid .cluster text {
+  fill: var(--primary-blue) !important;
+}
+
+/* Flowchart Specific Styling */
+.mermaid .flowchart-link {
+  stroke: var(--primary-blue) !important;
+  stroke-width: 2px !important;
+}
+
+/* Hover Effects */
+.mermaid .node:hover rect,
+.mermaid .node:hover circle,
+.mermaid .node:hover ellipse,
+.mermaid .node:hover polygon {
+  filter: brightness(1.1) !important;
+  cursor: pointer;
+}
+
+.mermaid .edgePath:hover .path {
+  stroke-width: 2.5px !important;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mermaid {
+    font-size: 14px;
+  }
+  
+  .mermaid .nodeLabel {
+    font-size: 10px !important;
+  }
+} 

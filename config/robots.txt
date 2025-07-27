@@ -1,0 +1,28 @@
+# robots.txt for Maxwell Consultancy Ltd Website
+# https://www.maxwellconsultancy.com/
+
+# Allow all web crawlers to access the entire site
+User-agent: *
+Allow: /
+
+# Specify the sitemap location
+Sitemap: https://www.maxwellconsultancy.com/sitemap.xml
+
+# Disallow access to specific directories
+Disallow: /config/
+Disallow: /components/
+Disallow: /docs/
+
+# Disallow access to specific file types
+Disallow: /*.json$
+Disallow: /*.md$
+
+# Crawl delay for heavy crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10 

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maxwell Consultancy Ltd - Engineering and Construction Consultancy Services in Rwanda and East Africa">
+    <title>Maxwell Consultancy Ltd - Engineering Excellence</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo/logo maxwell.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo/logo maxwell.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/logo maxwell.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo/logo maxwell.png">
+    <link rel="manifest" href="../config/manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="../assets/images/logo/logo maxwell.png" alt="Maxwell Consultancy Ltd Logo">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                    <li class="nav__item dropdown">
+                        <a href="projects.html" class="nav__link">Projects <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="projects.html#buildings">Buildings Construction Projects</a></li>
+                            <li><a href="projects.html#roads">Roads Industrial Parks Airports</a></li>
+                            <li><a href="projects.html#water">Water Supply System Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="contact.html#booking" class="nav__link nav__link--highlight">Book Online</a></li>
+                </ul>
+            </nav>
+            <div class="header__mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero hero--video">
+        <div class="hero__video-container">
+            <video class="hero__video" autoplay muted loop playsinline>
+                <source src="../assets/images/hero/homevideo.mp4" type="video/mp4">
+            </video>
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">HELPING YOU BUILD A BETTER TOMORROW</h1>
+                <p class="hero__subtitle">Trusted by global leaders and elite organizations, we craft bespoke masterpieces.</p>
+                <div class="hero__buttons">
+                    <a href="contact.html#booking" class="btn btn--primary btn--lg">BOOK A CALL NOW</a>
+                    <a href="#about-preview" class="btn btn--white btn--lg">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <span class="hero__scroll-text">Scroll Down</span>
+            <span class="hero__scroll-icon"></span>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">SET AN INTRODUCTION MEETING TODAY</h2>
+            </div>
+            <form id="booking-form" class="booking-form__form" data-aos="fade-up" data-aos-delay="200">
+                <div class="form__row">
+                    <div class="form__group">
+                        <input type="text" id="first-name" name="first-name" class="form__input" placeholder="First name" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" id="last-name" name="last-name" class="form__input" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__group">
+                        <input type="email" id="email" name="email" class="form__input" placeholder="Email" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" id="phone" name="phone" class="form__input" placeholder="Phone" required>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <textarea id="message" name="message" class="form__textarea" placeholder="Leave a message" rows="4"></textarea>
+                </div>
+                <div class="form__submit">
+                    <button type="submit" class="btn btn--primary btn--full">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section id="about-preview" class="about-preview section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">ABOUT US</h2>
+                <p class="section__subtitle">BUILD YOUR OWN PROJECT TEAM AND TAKE CONTROL</p>
+            </div>
+            <div class="about-preview__content">
+                <div class="about-preview__text" data-aos="fade-right" data-aos-duration="800">
+                    <p>Deliver exceptional results faster with an in-house engineering team tailored to your needs—no external consultancy required.</p>
+                    <p>Maxwell Consultancy Ltd is a leading engineering and construction consultancy firm based in Kigali, Rwanda. With over 15 years of experience, we have successfully delivered projects across East Africa, providing innovative and sustainable solutions to complex engineering challenges.</p>
+                    <div class="about-preview__stats">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <span class="stat-number">62</span>
+                            <span class="stat-label">Team Members</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn--primary">BOOK A CALL NOW</a>
+                </div>
+                <div class="about-preview__image" data-aos="fade-left" data-aos-duration="800">
+                    <img src="../assets/images/hero/background.png" alt="Maxwell Consultancy Team" class="about-preview__img">
+                    <div class="about-preview__video-btn">
+                        <a href="#video-modal" class="video-play-btn" data-toggle="modal">
+                            <i class="fas fa-play"></i>
+                        </a>
+                        <span>Watch CEO Introduction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <div class="modal__video-container">
+                <video controls class="modal__video">
+                    <source src="../assets/images/hero/file.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <section class="team-preview section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">OUR TEAM</h2>
+            </div>
+            <div class="team-preview__grid">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card__image">
+                        <img src="../assets/images/team/robert mpagazehe ceo.png" alt="Robert Mpagazehe">
+                    </div>
+                    <div class="team-card__content">
+                        <h3 class="team-card__name">ROBERT MPAGAZEHE</h3>
+                        <p class="team-card__position">Managing Director</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card__image">
+                        <img src="../assets/images/team/dusabe jane.png" alt="Dusabe Jane">
+                    </div>
+                    <div class="team-card__content">
+                        <h3 class="team-card__name">DUSABE JANE</h3>
+                        <p class="team-card__position">Executive Director</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card__image">
+                        <img src="../assets/images/team/ngabonziza damour.png" alt="Ngabonziza Jean D'Amour">
+                    </div>
+                    <div class="team-card__content">
+                        <h3 class="team-card__name">NGABONZIZA JEAN D'AMOUR</h3>
+                        <p class="team-card__position">Senior Structural Engineer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="team-preview__cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="about.html" class="btn btn--secondary">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">WHAT WE CAN DO FOR YOU</h2>
+                <p class="section__subtitle">Providing engineering consulting solutions</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card__icon">
+                        <i class="fas fa-tasks fa-3x"></i>
+                    </div>
+                    <h3 class="service-card__title">MANAGEMENT AND SUPERVISION</h3>
+                    <p class="service-card__description">Expert project management and on-site supervision ensuring quality and compliance with standards.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card__icon">
+                        <i class="fas fa-building fa-3x"></i>
+                    </div>
+                    <h3 class="service-card__title">STRUCTURAL ENGINEERING</h3>
+                    <p class="service-card__description">Comprehensive structural design and analysis for buildings and infrastructure projects.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card__icon">
+                        <i class="fas fa-road fa-3x"></i>
+                    </div>
+                    <h3 class="service-card__title">TRANSPORT AND HIGHWAY ENGINEERING</h3>
+                    <p class="service-card__description">Specialized design and planning for roads, highways, and transportation infrastructure.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card__icon">
+                        <i class="fas fa-calendar-alt fa-3x"></i>
+                    </div>
+                    <h3 class="service-card__title">PROJECT SCHEDULING</h3>
+                    <p class="service-card__description">Detailed project planning and scheduling to ensure timely completion and resource optimization.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card__icon">
+                        <i class="fas fa-check-circle fa-3x"></i>
+                    </div>
+                    <h3 class="service-card__title">QUALITY ASSURANCE</h3>
+                    <p class="service-card__description">Comprehensive quality control and assurance systems to maintain the highest standards.</p>
+                </div>
+            </div>
+            <div class="services__cta" data-aos="fade-up" data-aos-delay="600">
+                <a href="services.html" class="btn btn--primary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="projects section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">FEATURED PROJECTS</h2>
+                <p class="section__subtitle">Every project has its unique DNA</p>
+            </div>
+            <div class="projects__grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card__image">
+                        <img src="../assets/images/projects/buildings/rra building.png" alt="Buildings Projects">
+                        <div class="project-card__overlay"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">BUILDINGS PROJECTS</h3>
+                        <p class="project-card__description">Maxwell Consultancy has worked on big buildings in Rwanda such as The Rwanda Revenue Authority building and more.</p>
+                        <a href="projects.html#buildings" class="project-card__link">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card__image">
+                        <img src="../assets/images/projects/airports/airports.png" alt="Roads & Airports">
+                        <div class="project-card__overlay"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">ROADS & AIRPORTS</h3>
+                        <p class="project-card__description">Our work includes Kigali International, Kamembe, and Rubavu Airports.</p>
+                        <a href="projects.html#roads" class="project-card__link">Learn More</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card__image">
+                        <img src="../assets/images/projects/water-supply/water supply gatsibo.png" alt="Water Supply">
+                        <div class="project-card__overlay"></div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">WATER SUPPLY</h3>
+                        <p class="project-card__description">Our services extend to water supply projects in Gatsibo, Ngoma, Rubavu, Nyabihu and Rutsiro districts.</p>
+                        <a href="projects.html#water" class="project-card__link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects__cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="projects.html" class="btn btn--secondary">Learn More About Our Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">WE WORK WITH TOP NOTCH CLIENTS</h2>
+                <p class="section__subtitle">Engineers who understand your business</p>
+            </div>
+            <div class="clients__carousel">
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../assets/images/icons/world bank.png" alt="World Bank">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../assets/images/icons/undp.png" alt="UNDP">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="300">
+                    <img src="../assets/images/icons/rwanda army.png" alt="Government of Rwanda">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="400">
+                    <img src="../assets/images/icons/Screenshot 2025-07-26 004844.png" alt="University of Rwanda">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="500">
+                    <img src="../assets/images/icons/logo.png" alt="NISR">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="600">
+                    <img src="../assets/images/icons/RWANDA CAA.png" alt="RCAA">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta section section--primary">
+        <div class="container">
+            <div class="contact-cta__content" data-aos="fade-up">
+                <h2 class="contact-cta__title">Ready to Start Your Project?</h2>
+                <p class="contact-cta__text">Contact us today for a consultation with our expert team.</p>
+                <a href="contact.html" class="btn btn--white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column footer__column--about">
+                    <img src="../assets/images/logo/logo maxwell.png" alt="Maxwell Consultancy Ltd" class="footer__logo">
+                    <p class="footer__description">Maxwell Consultancy Ltd is a leading engineering and construction consultancy firm based in Kigali, Rwanda, providing innovative solutions across East Africa.</p>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Our Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services.html">Structural Engineering</a></li>
+                        <li><a href="services.html">Transport & Highway Engineering</a></li>
+                        <li><a href="services.html">Project Management</a></li>
+                        <li><a href="services.html">Construction Supervision</a></li>
+                        <li><a href="services.html">Quality Assurance</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column footer__column--contact">
+                    <h3 class="footer__heading">Contact Us</h3>
+                    <address class="footer__contact">
+                        <p><strong>Address:</strong> Kisimenti - KG1, 50, Kigali, Rwanda</p>
+                        <p><strong>Phone:</strong> +(250) 795 583 304</p>
+                        <p><strong>P.O Box:</strong> 5095</p>
+                        <p><strong>Email:</strong> info@maxwellconsultancyltd.com</p>
+                    </address>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 Maxwell Consultancy Ltd. All Rights Reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/slider.js"></script>
+    <script src="../assets/js/form-handler.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Video Modal
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('video-modal');
+            const videoBtn = document.querySelector('.video-play-btn');
+            const closeBtn = document.querySelector('.modal__close');
+            const video = document.querySelector('.modal__video');
+            
+            if (videoBtn && modal && closeBtn && video) {
+                videoBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.style.display = 'flex';
+                    setTimeout(() => {
+                        modal.classList.add('show');
+                        video.play();
+                    }, 10);
+                });
+                
+                closeBtn.addEventListener('click', function() {
+                    modal.classList.remove('show');
+                    video.pause();
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                    }, 300);
+                });
+                
+                window.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.classList.remove('show');
+                        video.pause();
+                        setTimeout(() => {
+                            modal.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            }
+            
+            // Stats Counter Animation
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            if (statNumbers.length > 0) {
+                const options = {
+                    threshold: 0.5
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const target = entry.target;
+                            const countTo = parseInt(target.textContent.replace(/[^0-9]/g, ''));
+                            let count = 0;
+                            const duration = 2000; // 2 seconds
+                            const increment = Math.ceil(countTo / (duration / 16)); // 60fps
+                            
+                            const timer = setInterval(() => {
+                                count += increment;
+                                if (count >= countTo) {
+                                    target.textContent = target.textContent.includes('+') ? countTo + '+' : countTo;
+                                    clearInterval(timer);
+                                } else {
+                                    target.textContent = target.textContent.includes('+') ? count + '+' : count;
+                                }
+                            }, 16);
+                            
+                            observer.unobserve(target);
+                        }
+                    });
+                }, options);
+                
+                statNumbers.forEach(stat => {
+                    observer.observe(stat);
+                });
+            }
+        });
+    </script>
+
+    <style>
+        /* Hero Section Enhancements */
+        .hero--video {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero__video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .hero__video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+            z-index: 2;
+        }
+        
+        .hero__content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .hero__title {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero__subtitle {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .hero__buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero__scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            z-index: 3;
+            animation: bounce 2s infinite;
+        }
+        
+        .hero__scroll-text {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+        
+        .hero__scroll-icon {
+            width: 30px;
+            height: 50px;
+            border: 2px solid rgba(255,255,255,0.6);
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .hero__scroll-icon::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: white;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            animation: scrollDown 2s infinite;
+        }
+        
+        @keyframes scrollDown {
+            0% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* About Preview Enhancements */
+        .about-preview__stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+        
+        .about-preview__image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about-preview__video-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+            z-index: 2;
+        }
+        
+        .video-play-btn {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .video-play-btn:hover {
+            transform: scale(1.1);
+            background-color: var(--primary-blue);
+        }
+        
+        .video-play-btn i {
+            font-size: 1.5rem;
+            margin-left: 5px;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            opacity: 1;
+        }
+        
+        .modal__content {
+            width: 90%;
+            max-width: 900px;
+            background-color: #000;
+            border-radius: 10px;
+            position: relative;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal.show .modal__content {
+            transform: scale(1);
+        }
+        
+        .modal__close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            z-index: 1;
+        }
+        
+        .modal__video-container {
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            position: relative;
+        }
+        
+        .modal__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero__title {
+                font-size: 2.5rem;
+            }
+            
+            .hero__subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .about-preview__stats {
+                justify-content: center;
+            }
+        }
+    </style>
+</body>
+</html> 

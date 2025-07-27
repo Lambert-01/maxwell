@@ -1,0 +1,340 @@
+{
+  "leadership": [
+    {
+      "id": "robert-mpagazehe",
+      "name": "Robert Mpagazehe",
+      "position": "Founder & Managing Director",
+      "bio": "Robert Mpagazehe is the founder and Managing Director of Maxwell Consultancy Ltd. With over 25 years of experience in structural engineering and project management, Robert has led the company from its inception in 2005 to become one of Rwanda's leading engineering consultancy firms. He holds a Master's degree in Structural Engineering from the University of Cape Town and a Bachelor's degree in Civil Engineering from the University of Rwanda.",
+      "education": [
+        "MSc in Structural Engineering, University of Cape Town",
+        "BSc in Civil Engineering, University of Rwanda"
+      ],
+      "experience": [
+        "25+ years in structural engineering and project management",
+        "Led over 100 major infrastructure projects across East Africa",
+        "Former Head of Engineering at Rwanda Housing Authority"
+      ],
+      "certifications": [
+        "Professional Engineer (PE), Rwanda Engineering Council",
+        "Project Management Professional (PMP)",
+        "Chartered Engineer, Institution of Civil Engineers (UK)"
+      ],
+      "image": "robert-mpagazehe.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/robert-mpagazehe",
+        "twitter": "https://twitter.com/robertmpagazehe"
+      }
+    },
+    {
+      "id": "dusabe-jane",
+      "name": "Jane Dusabe",
+      "position": "Technical Director",
+      "bio": "Jane Dusabe serves as the Technical Director at Maxwell Consultancy Ltd, overseeing all technical operations and quality assurance. With a PhD in Environmental Engineering from the University of Nairobi, Jane brings specialized expertise in water supply systems and environmental impact assessments. She has been with the company since 2010 and has played a crucial role in expanding the firm's service offerings and technical capabilities.",
+      "education": [
+        "PhD in Environmental Engineering, University of Nairobi",
+        "MSc in Water Resources Engineering, UNESCO-IHE Institute for Water Education",
+        "BSc in Civil Engineering, University of Rwanda"
+      ],
+      "experience": [
+        "15+ years in water resources and environmental engineering",
+        "Led the design of major water supply projects serving over 500,000 people",
+        "Former consultant for the United Nations Development Programme"
+      ],
+      "certifications": [
+        "Professional Engineer (PE), Rwanda Engineering Council",
+        "Certified Environmental Professional (CEP)",
+        "International Water Association (IWA) Member"
+      ],
+      "image": "dusabe-jane.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/jane-dusabe",
+        "researchgate": "https://www.researchgate.net/profile/Jane_Dusabe"
+      }
+    },
+    {
+      "id": "ngabonziza-jean",
+      "name": "Jean Ngabonziza",
+      "position": "Operations Director",
+      "bio": "Jean Ngabonziza is the Operations Director at Maxwell Consultancy Ltd, responsible for project operations, resource allocation, and client relations. With an MBA from the University of Rwanda and 15 years of experience in project management, Jean ensures that all projects are delivered on time, within budget, and to the highest quality standards. He joined Maxwell Consultancy in 2012 after a successful career in construction management.",
+      "education": [
+        "MBA, University of Rwanda",
+        "BSc in Construction Management, Jomo Kenyatta University"
+      ],
+      "experience": [
+        "15+ years in project management and construction supervision",
+        "Managed projects with a combined value of over $50 million",
+        "Former Project Manager at Rwanda Development Board"
+      ],
+      "certifications": [
+        "Project Management Professional (PMP)",
+        "PRINCE2 Practitioner",
+        "Certified Construction Manager (CCM)"
+      ],
+      "image": "ngabonziza-jean.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/jean-ngabonziza"
+      }
+    }
+  ],
+  "senior_engineers": [
+    {
+      "id": "mutoni-alice",
+      "name": "Alice Mutoni",
+      "position": "Senior Structural Engineer",
+      "bio": "Alice Mutoni is a Senior Structural Engineer with 12 years of experience in designing complex structures. She specializes in seismic design and has contributed to several landmark buildings in Kigali.",
+      "education": [
+        "MSc in Structural Engineering, University of Nairobi",
+        "BSc in Civil Engineering, University of Rwanda"
+      ],
+      "experience": [
+        "12+ years in structural design and analysis",
+        "Lead engineer for the RRA Building project",
+        "Former lecturer at the University of Rwanda"
+      ],
+      "certifications": [
+        "Professional Engineer (PE), Rwanda Engineering Council",
+        "Structural Engineering Certificate, American Concrete Institute"
+      ],
+      "image": "mutoni-alice.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/alice-mutoni"
+      }
+    },
+    {
+      "id": "habimana-eric",
+      "name": "Eric Habimana",
+      "position": "Senior Civil Engineer",
+      "bio": "Eric Habimana is a Senior Civil Engineer specializing in transportation infrastructure. With 10 years of experience, he has led the design and supervision of major road and airport projects.",
+      "education": [
+        "MSc in Highway Engineering, University of Cape Town",
+        "BSc in Civil Engineering, University of Rwanda"
+      ],
+      "experience": [
+        "10+ years in transportation infrastructure design",
+        "Lead engineer for the Kigali International Airport expansion",
+        "Former engineer at the Rwanda Transport Development Agency"
+      ],
+      "certifications": [
+        "Professional Engineer (PE), Rwanda Engineering Council",
+        "International Road Federation (IRF) Fellow"
+      ],
+      "image": "habimana-eric.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/eric-habimana"
+      }
+    },
+    {
+      "id": "uwase-marie",
+      "name": "Marie Uwase",
+      "position": "Senior Environmental Engineer",
+      "bio": "Marie Uwase is a Senior Environmental Engineer with expertise in environmental impact assessments and sustainable design. She has led numerous environmental studies for major infrastructure projects.",
+      "education": [
+        "MSc in Environmental Engineering, University of Stellenbosch",
+        "BSc in Environmental Science, University of Rwanda"
+      ],
+      "experience": [
+        "9+ years in environmental engineering and impact assessment",
+        "Led environmental studies for over 20 major projects",
+        "Former environmental consultant for the Rwanda Environment Management Authority"
+      ],
+      "certifications": [
+        "Certified Environmental Professional (CEP)",
+        "Environmental Impact Assessment Practitioner",
+        "LEED Accredited Professional"
+      ],
+      "image": "uwase-marie.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/marie-uwase"
+      }
+    }
+  ],
+  "project_managers": [
+    {
+      "id": "mugisha-david",
+      "name": "David Mugisha",
+      "position": "Senior Project Manager",
+      "bio": "David Mugisha is a Senior Project Manager with extensive experience in managing complex engineering projects. He specializes in government infrastructure projects and has successfully delivered numerous high-profile assignments.",
+      "education": [
+        "MSc in Project Management, University of Nairobi",
+        "BSc in Civil Engineering, University of Rwanda"
+      ],
+      "experience": [
+        "14+ years in project management",
+        "Managed projects with a combined value of over $30 million",
+        "Former project coordinator at the Ministry of Infrastructure"
+      ],
+      "certifications": [
+        "Project Management Professional (PMP)",
+        "PRINCE2 Practitioner",
+        "Professional Engineer (PE), Rwanda Engineering Council"
+      ],
+      "image": "mugisha-david.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/david-mugisha"
+      }
+    },
+    {
+      "id": "kamaliza-grace",
+      "name": "Grace Kamaliza",
+      "position": "Project Manager",
+      "bio": "Grace Kamaliza is a Project Manager specializing in water infrastructure projects. She has successfully managed numerous water supply and sanitation projects throughout Rwanda.",
+      "education": [
+        "MSc in Water Resources Management, UNESCO-IHE Institute for Water Education",
+        "BSc in Civil Engineering, University of Rwanda"
+      ],
+      "experience": [
+        "8+ years in project management for water infrastructure",
+        "Led the Gatsibo Water Supply project",
+        "Former engineer at Water and Sanitation Corporation (WASAC)"
+      ],
+      "certifications": [
+        "Project Management Professional (PMP)",
+        "Water Utility Management Certification"
+      ],
+      "image": "kamaliza-grace.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/grace-kamaliza"
+      }
+    }
+  ],
+  "technical_staff": [
+    {
+      "id": "niyonzima-james",
+      "name": "James Niyonzima",
+      "position": "Structural Engineer",
+      "bio": "James Niyonzima is a Structural Engineer with 5 years of experience in building design and analysis. He specializes in reinforced concrete structures and has contributed to several commercial building projects.",
+      "education": [
+        "BSc in Civil Engineering, University of Rwanda"
+      ],
+      "experience": [
+        "5+ years in structural engineering",
+        "Involved in the design of 10+ commercial buildings",
+        "Former junior engineer at a local construction firm"
+      ],
+      "certifications": [
+        "Graduate Engineer, Rwanda Engineering Council",
+        "AutoCAD Certified Professional"
+      ],
+      "image": "niyonzima-james.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/james-niyonzima"
+      }
+    },
+    {
+      "id": "ishimwe-claire",
+      "name": "Claire Ishimwe",
+      "position": "Civil Engineer",
+      "bio": "Claire Ishimwe is a Civil Engineer focusing on road design and drainage systems. She has been involved in several urban infrastructure projects in Kigali and other cities.",
+      "education": [
+        "BSc in Civil Engineering, University of Rwanda"
+      ],
+      "experience": [
+        "4+ years in civil engineering",
+        "Involved in the Kigali Urban Roads Upgrade project",
+        "Former intern at the City of Kigali"
+      ],
+      "certifications": [
+        "Graduate Engineer, Rwanda Engineering Council",
+        "Civil 3D Certified Professional"
+      ],
+      "image": "ishimwe-claire.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/claire-ishimwe"
+      }
+    },
+    {
+      "id": "kwizera-peter",
+      "name": "Peter Kwizera",
+      "position": "CAD Technician",
+      "bio": "Peter Kwizera is a skilled CAD Technician with expertise in creating detailed engineering drawings and 3D models. He supports the engineering team with technical drafting and visualization.",
+      "education": [
+        "Diploma in Architectural Technology, Integrated Polytechnic Regional College (IPRC)"
+      ],
+      "experience": [
+        "7+ years in technical drafting and CAD",
+        "Created drawings for over 30 major projects",
+        "Former CAD technician at an architectural firm"
+      ],
+      "certifications": [
+        "AutoCAD Certified Professional",
+        "Revit Certified Professional",
+        "BIM Level 2 Certified"
+      ],
+      "image": "kwizera-peter.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/peter-kwizera"
+      }
+    }
+  ],
+  "support_staff": [
+    {
+      "id": "mukamana-sarah",
+      "name": "Sarah Mukamana",
+      "position": "Finance Manager",
+      "bio": "Sarah Mukamana is the Finance Manager responsible for financial planning, accounting, and reporting. She ensures the company's financial health and compliance with regulatory requirements.",
+      "education": [
+        "MBA in Finance, University of Rwanda",
+        "Bachelor of Commerce, University of Nairobi"
+      ],
+      "experience": [
+        "10+ years in financial management",
+        "Former accountant at a multinational corporation",
+        "Expertise in project financial planning and control"
+      ],
+      "certifications": [
+        "Certified Public Accountant (CPA)",
+        "Association of Chartered Certified Accountants (ACCA) Member"
+      ],
+      "image": "mukamana-sarah.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/sarah-mukamana"
+      }
+    },
+    {
+      "id": "gasana-patrick",
+      "name": "Patrick Gasana",
+      "position": "HR & Administration Manager",
+      "bio": "Patrick Gasana oversees human resources and administrative functions, including recruitment, staff development, office management, and logistics. He plays a key role in maintaining a positive work environment.",
+      "education": [
+        "MSc in Human Resource Management, University of Rwanda",
+        "Bachelor of Business Administration, Mount Kenya University"
+      ],
+      "experience": [
+        "8+ years in HR and administration",
+        "Former HR officer at a regional bank",
+        "Expertise in talent acquisition and development"
+      ],
+      "certifications": [
+        "Professional in Human Resources (PHR)",
+        "Certified HR Manager"
+      ],
+      "image": "gasana-patrick.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/patrick-gasana"
+      }
+    },
+    {
+      "id": "umutoni-diane",
+      "name": "Diane Umutoni",
+      "position": "Marketing & Communications Officer",
+      "bio": "Diane Umutoni manages the company's marketing and communications activities, including branding, digital presence, client communications, and public relations.",
+      "education": [
+        "Bachelor of Arts in Communication, University of Rwanda"
+      ],
+      "experience": [
+        "5+ years in marketing and communications",
+        "Former communications officer at a development organization",
+        "Expertise in digital marketing and content creation"
+      ],
+      "certifications": [
+        "Digital Marketing Certified Associate",
+        "Public Relations Society Member"
+      ],
+      "image": "umutoni-diane.jpg",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/diane-umutoni",
+        "twitter": "https://twitter.com/diane_umutoni"
+      }
+    }
+  ]
+} 

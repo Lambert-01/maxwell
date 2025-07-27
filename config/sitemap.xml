@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.maxwellconsultancy.com/</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://www.maxwellconsultancy.com/pages/about.html</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://www.maxwellconsultancy.com/pages/services.html</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Projects Page -->
+  <url>
+    <loc>https://www.maxwellconsultancy.com/pages/projects.html</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Team Page -->
+  <url>
+    <loc>https://www.maxwellconsultancy.com/pages/team.html</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Careers Page -->
+  <url>
+    <loc>https://www.maxwellconsultancy.com/pages/careers.html</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- News Page -->
+  <url>
+    <loc>https://www.maxwellconsultancy.com/pages/news.html</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.maxwellconsultancy.com/pages/contact.html</loc>
+    <lastmod>2023-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset> 

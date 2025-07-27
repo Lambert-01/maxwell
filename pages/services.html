@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Maxwell Consultancy Ltd - Our comprehensive engineering and construction services">
+    <title>Our Services - Maxwell Consultancy Ltd</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/logo/logo maxwell.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo/logo maxwell.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/logo maxwell.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo/logo maxwell.png">
+    <link rel="manifest" href="../config/manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Additional styles for services page */
+        .services-hero {
+            background-color: var(--primary-blue);
+            padding: 120px 0 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+        
+        .services-hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .services-hero__title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .services-hero__subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        /* Geometric Service Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-geo-card {
+            position: relative;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+        }
+        
+        .service-geo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-orange));
+            z-index: 2;
+        }
+        
+        .service-geo-card::after {
+            content: '';
+            position: absolute;
+            bottom: -100%;
+            right: -100%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, rgba(30,58,138,0.05) 0%, rgba(245,158,11,0.05) 100%);
+            border-radius: 50%;
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+        
+        .service-geo-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(30,58,138,0.2);
+        }
+        
+        .service-geo-card:hover::after {
+            bottom: -50%;
+            right: -50%;
+        }
+        
+        .service-geo-card__number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 5rem;
+            font-weight: 700;
+            color: rgba(245,158,11,0.1);
+            line-height: 1;
+            z-index: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .service-geo-card:hover .service-geo-card__number {
+            color: rgba(245,158,11,0.2);
+            transform: scale(1.2);
+        }
+        
+        .service-geo-card__header {
+            padding: 30px 30px 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-geo-card__title {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .service-geo-card__title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+        
+        .service-geo-card:hover .service-geo-card__title::after {
+            width: 100%;
+        }
+        
+        .service-geo-card__icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-blue), #3b82f6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 10px 20px rgba(30,58,138,0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .service-geo-card:hover .service-geo-card__icon {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, var(--accent-orange), #f59e0b);
+        }
+        
+        .service-geo-card__content {
+            padding: 0 30px 30px;
+            flex-grow: 1;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .service-geo-card__description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .service-geo-card__link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-orange);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .service-geo-card__link i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-geo-card__link:hover {
+            color: var(--primary-blue);
+        }
+        
+        .service-geo-card__link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Quote Section */
+        .quote-section {
+            background-color: var(--primary-blue);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 15rem;
+            color: rgba(255,255,255,0.05);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .quote-section__content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quote-section__text {
+            font-size: 2rem;
+            font-style: italic;
+            color: white;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .quote-section__author {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-geo-card__number {
+                font-size: 4rem;
+            }
+            
+            .service-geo-card__title {
+                font-size: 1.5rem;
+            }
+            
+            .quote-section__text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="../assets/images/logo/logo maxwell.png" alt="Maxwell Consultancy Ltd Logo">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="services.html" class="nav__link active">Services</a></li>
+                    <li class="nav__item dropdown">
+                        <a href="projects.html" class="nav__link">Projects <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="projects.html#buildings">Buildings Construction Projects</a></li>
+                            <li><a href="projects.html#roads">Roads Industrial Parks Airports</a></li>
+                            <li><a href="projects.html#water">Water Supply System Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="contact.html#booking" class="nav__link nav__link--highlight">Book Online</a></li>
+                </ul>
+            </nav>
+            <div class="header__mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="services-hero__content" data-aos="fade-up">
+                <h1 class="services-hero__title">OUR SERVICES</h1>
+                <p class="services-hero__subtitle">Our diverse areas of expertise are designed to fit the changing needs of your project</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <h2 class="section__title">WHAT WE CAN DO FOR YOU</h2>
+                <p class="section__subtitle">Providing engineering consulting solutions</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Engineering Consultancy -->
+                <div class="service-geo-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-geo-card__number">01</div>
+                    <div class="service-geo-card__header">
+                        <div class="service-geo-card__icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3 class="service-geo-card__title">ENGINEERING CONSULTANCY</h3>
+                    </div>
+                    <div class="service-geo-card__content">
+                        <p class="service-geo-card__description">Maxwell Consultancy Ltd specializes in providing end-to-end engineering solutions for the construction sector, delivering innovative and sustainable designs for complex infrastructure projects.</p>
+                    </div>
+                </div>
+                
+                <!-- Structural Engineering -->
+                <div class="service-geo-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-geo-card__number">02</div>
+                    <div class="service-geo-card__header">
+                        <div class="service-geo-card__icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="service-geo-card__title">STRUCTURAL ENGINEERING</h3>
+                    </div>
+                    <div class="service-geo-card__content">
+                        <p class="service-geo-card__description">Structural engineering is the backbone of construction consultancy, focusing on designing and analyzing the framework of buildings, bridges, and other infrastructures to ensure strength, stability, and safety.</p>
+                    </div>
+                </div>
+                
+                <!-- Transport and Highway Engineering -->
+                <div class="service-geo-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-geo-card__number">03</div>
+                    <div class="service-geo-card__header">
+                        <div class="service-geo-card__icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h3 class="service-geo-card__title">TRANSPORT AND HIGHWAY ENGINEERING</h3>
+                    </div>
+                    <div class="service-geo-card__content">
+                        <p class="service-geo-card__description">Our transport and highway engineering consultancy extends to roads, bridges, and urban planning, focusing on sustainable solutions that optimize traffic flow and enhance connectivity for communities.</p>
+                    </div>
+                </div>
+                
+                <!-- Utility Appraisal -->
+                <div class="service-geo-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-geo-card__number">04</div>
+                    <div class="service-geo-card__header">
+                        <div class="service-geo-card__icon">
+                            <i class="fas fa-faucet"></i>
+                        </div>
+                        <h3 class="service-geo-card__title">UTILITY APPRAISAL</h3>
+                    </div>
+                    <div class="service-geo-card__content">
+                        <p class="service-geo-card__description">Our expertise lies in designing and supervising clean water projects that enhance access in both urban and rural communities, delivering sustainable and cost-effective solutions.</p>
+                    </div>
+                </div>
+                
+                <!-- Project Scheduling -->
+                <div class="service-geo-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-geo-card__number">05</div>
+                    <div class="service-geo-card__header">
+                        <div class="service-geo-card__icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="service-geo-card__title">PROJECT SCHEDULING</h3>
+                    </div>
+                    <div class="service-geo-card__content">
+                        <p class="service-geo-card__description">Project scheduling integrates advanced tools and expertise to manage dependencies, allocate resources effectively, and anticipate potential challenges to ensure timely project completion.</p>
+                    </div>
+                </div>
+                
+                <!-- Quality Assurance -->
+                <div class="service-geo-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-geo-card__number">06</div>
+                    <div class="service-geo-card__header">
+                        <div class="service-geo-card__icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="service-geo-card__title">QUALITY ASSURANCE</h3>
+                    </div>
+                    <div class="service-geo-card__content">
+                        <p class="service-geo-card__description">From material selection to final inspections, quality assurance safeguards the integrity of construction processes, minimizes risks, and enhances project outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-section__content" data-aos="fade-up">
+                <p class="quote-section__text">"You can dream, create, design, and build the most wonderful place in the world. But it requires people to make the dream a reality."</p>
+                <p class="quote-section__author">WALT DISNEY</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta section section--primary">
+        <div class="container">
+            <div class="contact-cta__content" data-aos="fade-up">
+                <h2 class="contact-cta__title">Ready to Start Your Project?</h2>
+                <p class="contact-cta__text">Contact us today for a consultation with our expert team.</p>
+                <a href="contact.html" class="btn btn--white">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column footer__column--about">
+                    <img src="../assets/images/logo/logo maxwell.png" alt="Maxwell Consultancy Ltd" class="footer__logo">
+                    <p class="footer__description">Maxwell Consultancy Ltd is a leading engineering and construction consultancy firm based in Kigali, Rwanda, providing innovative solutions across East Africa.</p>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__heading">Our Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="services.html">Structural Engineering</a></li>
+                        <li><a href="services.html">Transport & Highway Engineering</a></li>
+                        <li><a href="services.html">Project Management</a></li>
+                        <li><a href="services.html">Construction Supervision</a></li>
+                        <li><a href="services.html">Quality Assurance</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column footer__column--contact">
+                    <h3 class="footer__heading">Contact Us</h3>
+                    <address class="footer__contact">
+                        <p><strong>Address:</strong> Kisimenti - KG1, 50, Kigali, Rwanda</p>
+                        <p><strong>Phone:</strong> +(250) 795 583 304</p>
+                        <p><strong>P.O Box:</strong> 5095</p>
+                        <p><strong>Email:</strong> info@maxwellconsultancyltd.com</p>
+                    </address>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 Maxwell Consultancy Ltd. All Rights Reserved.</p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+</body>
+</html> 

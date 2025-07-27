@@ -1,0 +1,316 @@
+/* 
+ * Maxwell Consultancy Ltd - Responsive Stylesheet
+ * Author: Maxwell Web Team
+ * Version: 1.0
+ */
+
+/* Mobile First Approach */
+
+/* ========== Small Mobile Devices (320px - 479px) ========== */
+@media only screen and (max-width: 479px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .section__title {
+    font-size: 1.8rem;
+  }
+  
+  .about-preview__stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card__number {
+    font-size: 2rem;
+  }
+  
+  .team-card__image {
+    height: 200px;
+  }
+  
+  .footer__social {
+    justify-content: center;
+  }
+  
+  .footer__legal {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+}
+
+/* ========== Mobile Devices (480px - 767px) ========== */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .hero {
+    height: 70vh;
+  }
+  
+  .hero__title {
+    font-size: 2.2rem;
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .about-preview__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .team-preview__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .clients__carousel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========== Tablet Devices (768px - 1023px) ========== */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .hero__content {
+    max-width: 500px;
+  }
+  
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .team-preview__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .clients__carousel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========== Desktop (1024px - 1279px) ========== */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .hero__content {
+    max-width: 550px;
+  }
+  
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .team-preview__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .clients__carousel {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* ========== Large Desktop (1280px and above) ========== */
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 var(--spacing-md);
+  }
+  
+  .hero__content {
+    max-width: 600px;
+  }
+  
+  .hero__title {
+    font-size: 3.5rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .section__title {
+    font-size: 2.5rem;
+  }
+  
+  .about-preview__content {
+    gap: var(--spacing-xl);
+  }
+  
+  .about-preview__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .team-preview__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+  
+  .clients__carousel {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* ========== Print Styles ========== */
+@media print {
+  .header,
+  .footer,
+  .hero__controls,
+  .contact-cta,
+  .btn {
+    display: none !important;
+  }
+  
+  .hero {
+    height: auto;
+    min-height: auto;
+    margin-top: 0;
+  }
+  
+  .hero__slide {
+    position: relative;
+    opacity: 1;
+  }
+  
+  .hero__slide::before {
+    display: none;
+  }
+  
+  .hero__content {
+    color: var(--text-dark);
+  }
+  
+  .hero__title {
+    color: var(--text-dark);
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  a {
+    text-decoration: underline;
+    color: var(--text-dark);
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .section {
+    padding: 1cm 0;
+    page-break-inside: avoid;
+  }
+  
+  .team-card,
+  .project-card,
+  .service-card,
+  .client-logo {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  p, blockquote, ul, ol, dl, table {
+    page-break-inside: avoid;
+  }
+  
+  img {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+}
+
+/* ========== Accessibility Styles ========== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (forced-colors: active) {
+  .btn,
+  .nav__link,
+  .service-card,
+  .team-card,
+  .project-card,
+  .client-logo {
+    border: 1px solid;
+  }
+} 
